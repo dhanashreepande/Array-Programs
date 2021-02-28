@@ -1,0 +1,27 @@
+package arrays;
+
+public class BinarySearch {
+
+	public static void main(String[] args)
+	{
+	int a[]= {1,2,3,4,5,6,7,8};
+	int min=a[0],max=a.length-1;
+	int key=6;
+	int mid=0;
+	while(max>=min)
+	{
+		mid=(min+max)/2;
+		if(key==a[mid])
+		{		System.out.println("found at "+mid +" location");
+		break;
+		}
+		if(key>a[mid])
+			min=mid+1;
+		else
+			max=mid-1;
+	}
+	if(max<min)
+	System.out.println("not found");
+	}
+
+}
